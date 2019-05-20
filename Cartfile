@@ -1,0 +1,2 @@
+github "Alamofire/Alamofire" >= 4.3
+github "realm/realm-cocoa" >= 2.1.2
