@@ -24,8 +24,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    
     @IBAction func login(_ sender: UIButton) {
 
         let url = "http://192.168.0.180:3000/users/login"
@@ -52,19 +50,13 @@ class ViewController: UIViewController {
                 self.resultCode = code
                 self.resultMsg = msg
             }
-            
-            
+
             print("ViewController resultCode ==> \(String(describing: self.resultCode))")
-            
-            
             guard let destination = self.storyboard?.instantiateViewController(withIdentifier: "LoginController") as? LoginController else { return }
-            
             destination.resultCode = self.resultCode
             destination.resultMsg = self.resultMsg
-            self.present(destination, animated: true, completion: nil)
+            self.navigationController?.pushViewController(destination, animated: true)
         }
-       
-
     }
 }
 

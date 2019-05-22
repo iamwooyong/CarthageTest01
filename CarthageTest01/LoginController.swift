@@ -19,11 +19,11 @@ class LoginController: UIViewController {
     override func viewDidLoad() {
  
         super.viewDidLoad()
-        print("Login Controller resultCode ==> \(resultCode)")
+        print("Login Controller resultCode ==> \(resultCode!)")
         if(resultCode == "001"){
             lblLogin.text = "로그인 성공"
         } else {
-            lblLogin.text = "로그인 실패 / 에러코드(\(String(describing: resultCode)):\(String(describing: resultMsg)))"
+            lblLogin.text = "로그인 실패 / 에러코드(\(String(describing: resultCode!)):\(String(describing: resultMsg!)))"
         }
         
         // Do any additional setup after loading the view.
