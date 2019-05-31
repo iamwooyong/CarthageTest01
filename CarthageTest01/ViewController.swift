@@ -49,13 +49,15 @@ class ViewController: UIViewController {
                 }
                 self.resultCode = code
                 self.resultMsg = msg
+            
+                print("ViewController resultCode ==> \(String(describing: self.resultCode))")
+                guard let destination = self.storyboard?.instantiateViewController(withIdentifier: "LoginController") as? LoginController else { return }
+                destination.resultCode = self.resultCode
+                destination.resultMsg = self.resultMsg
+                self.navigationController?.pushViewController(destination, animated: true)
             }
 
-            print("ViewController resultCode ==> \(String(describing: self.resultCode))")
-            guard let destination = self.storyboard?.instantiateViewController(withIdentifier: "LoginController") as? LoginController else { return }
-            destination.resultCode = self.resultCode
-            destination.resultMsg = self.resultMsg
-            self.navigationController?.pushViewController(destination, animated: true)
+
         }
     }
 }
