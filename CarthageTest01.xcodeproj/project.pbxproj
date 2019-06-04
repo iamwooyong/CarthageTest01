@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A00DA69322A64B3900FA3C23 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A00DA69022A1163200FA3C23 /* SwiftyJSON.framework */; };
+		A00DA69422A64C8600FA3C23 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0F41A122291ACC3008E4AB1 /* Alamofire.framework */; };
+		A00DA69522A64C8C00FA3C23 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0F41A0B22918809008E4AB1 /* Realm.framework */; };
+		A00DA69622A64CE200FA3C23 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A00DA69022A1163200FA3C23 /* SwiftyJSON.framework */; };
+		A00DA69722A64CE200FA3C23 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A00DA69022A1163200FA3C23 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A00DA69822A64CE200FA3C23 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0F41A122291ACC3008E4AB1 /* Alamofire.framework */; };
+		A00DA69922A64CE200FA3C23 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A0F41A122291ACC3008E4AB1 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A00DA69A22A64CE200FA3C23 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0F41A0B22918809008E4AB1 /* Realm.framework */; };
+		A00DA69B22A64CE200FA3C23 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A0F41A0B22918809008E4AB1 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A00DA69C22A64CE200FA3C23 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0F41A0A22918809008E4AB1 /* RealmSwift.framework */; };
+		A00DA69D22A64CE200FA3C23 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A0F41A0A22918809008E4AB1 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A0D385C922944E4A00EAEE9F /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D385C822944E4A00EAEE9F /* LoginController.swift */; };
 		A0D385CB229543DC00EAEE9F /* NewMemberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D385CA229543DC00EAEE9F /* NewMemberController.swift */; };
 		A0F419F822918430008E4AB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F419F722918430008E4AB1 /* AppDelegate.swift */; };
@@ -14,24 +25,19 @@
 		A0F419FD22918430008E4AB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0F419FB22918430008E4AB1 /* Main.storyboard */; };
 		A0F419FF22918431008E4AB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0F419FE22918431008E4AB1 /* Assets.xcassets */; };
 		A0F41A0222918431008E4AB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0F41A0022918431008E4AB1 /* LaunchScreen.storyboard */; };
-		A0F41A142291AEBD008E4AB1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0F41A122291ACC3008E4AB1 /* Alamofire.framework */; };
-		A0F41A152291AEBD008E4AB1 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A0F41A122291ACC3008E4AB1 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A0F41A162291AEBD008E4AB1 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0F41A0B22918809008E4AB1 /* Realm.framework */; };
-		A0F41A172291AEBD008E4AB1 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A0F41A0B22918809008E4AB1 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A0F41A182291AEBD008E4AB1 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0F41A0A22918809008E4AB1 /* RealmSwift.framework */; };
-		A0F41A192291AEBD008E4AB1 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A0F41A0A22918809008E4AB1 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		A0F41A1A2291AEBD008E4AB1 /* Embed Frameworks */ = {
+		A00DA69E22A64CE200FA3C23 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A0F41A172291AEBD008E4AB1 /* Realm.framework in Embed Frameworks */,
-				A0F41A152291AEBD008E4AB1 /* Alamofire.framework in Embed Frameworks */,
-				A0F41A192291AEBD008E4AB1 /* RealmSwift.framework in Embed Frameworks */,
+				A00DA69B22A64CE200FA3C23 /* Realm.framework in Embed Frameworks */,
+				A00DA69722A64CE200FA3C23 /* SwiftyJSON.framework in Embed Frameworks */,
+				A00DA69D22A64CE200FA3C23 /* RealmSwift.framework in Embed Frameworks */,
+				A00DA69922A64CE200FA3C23 /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -39,6 +45,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A00DA69022A1163200FA3C23 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		A0D385C822944E4A00EAEE9F /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		A0D385CA229543DC00EAEE9F /* NewMemberController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMemberController.swift; sourceTree = "<group>"; };
 		A0F419F422918430008E4AB1 /* CarthageTest01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarthageTest01.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,9 +65,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0F41A182291AEBD008E4AB1 /* RealmSwift.framework in Frameworks */,
-				A0F41A142291AEBD008E4AB1 /* Alamofire.framework in Frameworks */,
-				A0F41A162291AEBD008E4AB1 /* Realm.framework in Frameworks */,
+				A00DA69A22A64CE200FA3C23 /* Realm.framework in Frameworks */,
+				A00DA69622A64CE200FA3C23 /* SwiftyJSON.framework in Frameworks */,
+				A00DA69C22A64CE200FA3C23 /* RealmSwift.framework in Frameworks */,
+				A00DA69322A64B3900FA3C23 /* SwiftyJSON.framework in Frameworks */,
+				A00DA69422A64C8600FA3C23 /* Alamofire.framework in Frameworks */,
+				A00DA69822A64CE200FA3C23 /* Alamofire.framework in Frameworks */,
+				A00DA69522A64C8C00FA3C23 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +113,7 @@
 		A0F41A0922918808008E4AB1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A00DA69022A1163200FA3C23 /* SwiftyJSON.framework */,
 				A0F41A122291ACC3008E4AB1 /* Alamofire.framework */,
 				A0F41A0B22918809008E4AB1 /* Realm.framework */,
 				A0F41A0A22918809008E4AB1 /* RealmSwift.framework */,
@@ -120,7 +132,7 @@
 				A0F419F122918430008E4AB1 /* Frameworks */,
 				A0F419F222918430008E4AB1 /* Resources */,
 				A0F41A0E22918857008E4AB1 /* Run Script */,
-				A0F41A1A2291AEBD008E4AB1 /* Embed Frameworks */,
+				A00DA69E22A64CE200FA3C23 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -188,6 +200,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 			);
 			name = "Run Script";
 			outputFileListPaths = (
@@ -353,7 +366,6 @@
 		A0F41A0722918431008E4AB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X83QV576JN;
@@ -376,7 +388,6 @@
 		A0F41A0822918431008E4AB1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X83QV576JN;

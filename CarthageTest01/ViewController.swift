@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 
 
@@ -32,33 +33,60 @@ class ViewController: UIViewController {
             "pw": self.pw.text!
         ]
         print("id: \(String(describing: id.text)), pw: \(String(describing: pw.text))")
-
-        let alamo = Alamofire.request(url, method: .post, parameters: param, encoding: URLEncoding.httpBody)
         
-        alamo.responseJSON() { response in
+        //Alamofire.request(urlString, parameters: parameters, encoding: URLEncoding(destination: .httpBody))
+
+        
+        Alamofire.request(url, method: .post, parameters: param, encoding: URLEncoding(destination:.httpBody)).responseJSON { response in
+            print("Request: \(String(describing: response.request))")   // original url request
+            print("Response: \(String(describing: response.response))") // http url response
+            print("Result: \(response.result)")                         // response serialization result
             
-            if let json = response.result.value as? [String: Any] {
-                print("JSON: \(json)") // serialized json response
- 
-                guard let result = json["result"] as? [String: Any],
-                let code = result["resultCode"] as? String,
-                let msg = result["resultMsg"] as? String else {
-                    
-                    print("Failed to parse JSON")
-                    return
+            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                print("Data: \(utf8Text)") // original server data as UTF8 string
+                do{
+                    // Get json data
+                    let json = try JSON(data: data)
+                    let resultCode = json["result"]
+                    print("resultCode:  \(resultCode)")
+                    // Loop sub-json countries array
+//                    for (_, subJson) in json["result"]["countries"] {
+//                        // Display country name
+//                        if let name = subJson["name"].string {
+//                            print("Country: \(name)");
+//                        }
+//                    }
+                }catch{
+                    print("Unexpected error: \(error).")
                 }
-                self.resultCode = code
-                self.resultMsg = msg
-            
-                print("ViewController resultCode ==> \(String(describing: self.resultCode))")
-                guard let destination = self.storyboard?.instantiateViewController(withIdentifier: "LoginController") as? LoginController else { return }
-                destination.resultCode = self.resultCode
-                destination.resultMsg = self.resultMsg
-                self.navigationController?.pushViewController(destination, animated: true)
             }
-
-
+  
+            
+            
         }
     }
 }
 
+
+
+
+//            if let json = response.result.value as? [String: Any] {
+//                print("JSON: \(json)") // serialized json response
+//
+//                guard let result = json["result"] as? [String: Any],
+//                let code = result["resultCode"] as? String,
+//                let msg = result["resultMsg"] as? String else {
+//
+//                    print("Failed to parse JSON")
+//                    return
+//                }
+//                self.resultCode = code
+//                self.resultMsg = msg
+//
+//                print("ViewController resultCode ==> \(String(describing: self.resultCode))")
+//                guard let destination = self.storyboard?.instantiateViewController(withIdentifier: "LoginController") as? LoginController else { return }
+//                destination.resultCode = self.resultCode
+//                destination.resultMsg = self.resultMsg
+//                self.navigationController?.pushViewController(destination, animated: true)
+//            }
+//        }
